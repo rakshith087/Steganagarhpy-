@@ -77,9 +77,4 @@ This project involves creating a steganographic system to embed confidential tex
 To copy or clone this repository to your local machine, use the following commands:
 
 ```bash
-# Clone the repository
-git clone https://github.com/prasannareddy2804/Cyber-Security.git
-
-# Change directory to the cloned repository
-cd Cyber-Security
 
