@@ -4,7 +4,7 @@ import os
 import hashlib
 
 # Specify the path to the input image
-image_path = r"C:\Users\ambat\OneDrive\Desktop\Cyber Security\encoded.jpeg"
+image_path = r"/content/encryptedImage.jpg"
 
 # Read the input image wr have to set the variable 
 img = cv2.imread(image_path)
@@ -70,4 +70,5 @@ cv2.imwrite(encrypted_image_path, img)
 # Open the newly saved encrypted image
 os.startfile(encrypted_image_path)
 
-print(f"Message has been encoded into '{encrypted_image_path}'.")
+#The f-string was not closed properly. Added a closing double quote and closing parenthesis
+print(f"Message has been encoded into '{encrypted_image_path}'")
