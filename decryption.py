@@ -23,18 +23,18 @@ hash_object = hashlib.sha256(password.encode())
 hashed_password = hash_object.digest()
 
 # Initialize dictionaries for mapping ASCII values to characters
-d = {}  # Character to ASCII
-c = {}  # ASCII to character
+d = {}  
+c = {}  
 
 # Fill the dictionaries with ASCII values (0-255)
 for i in range(256):
-    d[chr(i)] = i  # Character to ASCII
-    c[i] = chr(i)  # ASCII to character
+    d[chr(i)] = i  
+    c[i] = chr(i)  
 
 # Initialize variables for image coordinates and color channel
-n = 0  # Row index
-m = 0  # Column index
-z = 0  # Color channel index
+n = 0  
+m = 0  
+z = 0  
 
 # Prepare a list to store the decoded message characters
 decoded_message = []
@@ -64,13 +64,13 @@ decoded_message = ''.join(decoded_message)
 
 # Print the decoded message
 print("Decoded message:", decoded_message)
-d = {}  # Character to ASCII
-c = {}  # ASCII to character
+d = {}  
+c = {}  
 
 # Fill the dictionaries with ASCII values (0-255)
 for i in range(256):
-    d[chr(i)] = i  # Character to ASCII
-    c[i] = chr(i)  # ASCII to character
+    d[chr(i)] = i  
+    c[i] = chr(i)  
 
 # Initialize variables for image coordinates and color channel
 n = 0  # Row index
@@ -87,7 +87,6 @@ while n < height:
     hashed_value = hashed_password[len(decoded_message) % len(hashed_password)]
     original_value = (pixel_value ^ hashed_value) % 256  # Ensure value is within 0-255 range
     
-    # Only append printable ASCII characters (range 32-126)
     if 32 <= original_value <= 126:
         decoded_message.append(c[original_value])
 
@@ -105,4 +104,5 @@ decoded_message = ''.join(decoded_message)
 
 # Print the decoded message
 print("Decoded message:", decoded_message)
+
 
