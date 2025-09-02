@@ -1,4 +1,4 @@
-imimport cv2
+import cv2
 import hashlib
 
 # Specify the path to the encrypted image
@@ -105,3 +105,4 @@ decoded_message = ''.join(decoded_message)
 
 # Print the decoded message
 print("Decoded message:", decoded_message)
+
